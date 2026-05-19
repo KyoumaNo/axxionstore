@@ -1,9 +1,6 @@
 // API Configuration
-const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://axxionstore-production.up.railway.app/api'
-  : 'http://localhost:3000/api';
+const API_BASE_URL = 'https://axxionstore-production.up.railway.app/api';
 
-// Vercel akan set environment variable untuk production
 const API_CONFIG = {
   BASE_URL: API_BASE_URL,
   ENDPOINTS: {
