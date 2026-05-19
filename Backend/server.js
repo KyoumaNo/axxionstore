@@ -6,6 +6,7 @@ import { initializeDatabase } from './db/init.js';
 import productRoutes from './routes/products.js';
 import authRoutes from './routes/auth.js';
 import usersRoutes from './routes/users.js';
+import eventsRoutes from './routes/events.js';
 import { errorHandler } from './middleware/errorHandler.js';
 
 dotenv.config();
@@ -25,6 +26,7 @@ await initializeDatabase();
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/users', usersRoutes);
+app.use('/api/events', eventsRoutes);
 
 // Health Check
 app.get('/api/health', (req, res) => {

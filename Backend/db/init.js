@@ -33,6 +33,17 @@ export async function initializeDatabase() {
         );
       `);
 
+      // events table
+      await pool.query(`
+        CREATE TABLE IF NOT EXISTS events (
+          id SERIAL PRIMARY KEY,
+          title TEXT NOT NULL,
+          type TEXT NOT NULL,
+          content TEXT NOT NULL,
+          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        );
+      `);
+
       // seed single admin account if it doesn't exist
       const adminEmail = process.env.ADMIN_EMAIL || 'adminaxxion@axxion.com';
       const adminPassword = process.env.ADMIN_PASSWORD || 'adminaxxion2026';
