@@ -1,5 +1,5 @@
 // API Service untuk komunikasi dengan Backend
-const API_URL = 'http://localhost:3000/api'; // Ganti saat production dengan Railway URL
+const API_URL = 'https://axxionstore-production.up.railway.app/api'; // Ganti saat production dengan Railway URL
 
 class APIService {
   // GET semua products dari database
