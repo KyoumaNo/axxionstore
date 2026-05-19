@@ -667,7 +667,8 @@
 
         async function loadProductsFromApi() {
             try {
-                PRODUCTS = await apiFetch('/api/products');
+                const response = await apiFetch('/api/products');
+                PRODUCTS = response.data || [];
             } catch (error) {
                 showToast(`Cannot load products: ${error.message}`);
                 PRODUCTS = [];
