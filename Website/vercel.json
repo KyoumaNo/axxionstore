@@ -14,8 +14,7 @@
       "source": "/(.*)",
       "headers": [
         {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600, s-maxage=3600"
+          "Cache-Control": "no-store"
         },
         {
           "key": "X-Content-Type-Options",
