@@ -15,6 +15,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 8080;
 const productsRoute = require('./routes/products');
+const cors = require('cors');
 
 // Middleware
 app.use(cors());
