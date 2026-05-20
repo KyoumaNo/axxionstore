@@ -14,11 +14,13 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 8080;
+const productsRoute = require('./routes/products');
 
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
 
 // Initialize Database
 await initializeDatabase();
